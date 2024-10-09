@@ -1,0 +1,61 @@
+{
+    "name": "yunojuno-react-code-test",
+    "version": "0.2.0",
+    "private": true,
+    "dependencies": {
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+        "@types/jest": "^29.5.8",
+        "@types/react": "^18.2.37",
+        "@types/react-dom": "^18.2.15",
+        "eslint-config-prettier": "^9.0.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^15.1.0",
+        "prettier": "^3.1.0",
+        "react-scripts": "^5.0.1",
+        "sass": "^1.40.1",
+        "tsc-files": "^1.1.4",
+        "typescript": "^5.2.2"
+    },
+    "overrides": {
+        "react-scripts": {
+            "typescript": "^5"
+        }
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "prepare": "husky install"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version",
+            "last 1 edge version"
+        ]
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "eslint-config-prettier"
+        ]
+    },
+    "husky": {
+        "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+        "**/*.{ts,tsx}": "tsc-files --noEmit src/react-app-env.d.ts",
+        "*.{ts, tsx,css,scss,json,md}": "prettier --write"
+    }
+}
