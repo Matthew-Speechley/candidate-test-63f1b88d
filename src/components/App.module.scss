@@ -1,26 +1,50 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  width: 200px;
+    width: 200px;
 }
 
 .App-header {
-  background-color: #47d7ac;
-  padding: 20px;
-  color: white;
+    background-color: #47d7ac;
+    padding: 20px;
+    color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
 }
 
 .App-content {
-  max-width: 1280px;
-  margin: auto;
+    max-width: 1280px;
+    margin: auto;
+    padding: 20px;
+}
+
+.App-loading {
+    animation: pulse 1s infinite;
+    text-align: center;
+}
+
+.App-cardList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
 }
