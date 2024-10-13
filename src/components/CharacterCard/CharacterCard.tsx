@@ -13,7 +13,13 @@ export default function CharacterCard({ name, category, description, image }: Ch
     return (
         <div className={styles["CharacterCard"]}>
             <div className={styles["CharacterCard-image"]}>
-                <img src={`/characters/${image}`} alt={name} height={80} width={80} />
+                <img
+                    src={`/characters/${image}`}
+                    alt={name}
+                    loading="lazy"
+                    height={80}
+                    width={80}
+                />
             </div>
             <div className={styles["CharacterCard-information"]}>
                 <h1>{name}</h1>
